@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typography</title>
+    <style>
+      *,
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #111;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .pharagraph span {
+        display: block;
+        opacity: 0;
+        animation: reveal 0.5s forwards var(--d);
+        text-align: center;
+      }
+
+      @keyframes reveal {
+        from {
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="pharagraph">
+        <span style="--d: 0s"
+          >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span
+        >
+        <span style="--d: 0.5s"
+          >Sed a lacinia velit, id interdum massa.</span
+        >
+        <span style="--d: 1s"
+          >Nunc risus massa, consectetur sit amet neque et, tempor pharetra ex.</span
+        >
+        <span style="--d: 1.5s"
+          >Vestibulum sit amet leo sapien.</span
+        >
+        <span style="--d: 2s"
+          >Aliquam lacinia mi in diam porttitor consectetur.</span
+        >
+        <span style="--d: 2.5s"
+          >Donec vulputate, velit ornare pellentesque fermentum, elit ligula luctus lectus, scelerisque scelerisque lectus arcu ut arcu.</span
+        >
+      </p>
+    </div>
+  </body>
+</html>
